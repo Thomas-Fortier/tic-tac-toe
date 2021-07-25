@@ -5,4 +5,4 @@ For this application I used React / Next.JS.
 
 ## Hosting URL
 
-To view the production version of this app, visit [here](https://tic-tac-toe-q6kv3leuc-thomas-fortier.vercel.app/).
+To view the production version of this app, visit [here](https://tic-tac-toe-thomas-fortier.vercel.app).
