@@ -6,7 +6,7 @@ export default function MetaTags({ props: props }: { props: MetatagProps }) {
         <>
             <title>{props.title}</title>
             <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="@fireship_dev" />
+            <meta name="twitter:site" content="@BixbiteMr" />
             <meta name="twitter:title" content={props.title} />
             <meta name="twitter:description" content={props.description} />
             <meta name="twitter:image" content={props.image} />
