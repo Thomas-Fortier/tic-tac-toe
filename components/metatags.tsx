@@ -16,7 +16,7 @@ export default function MetaTags({ props: props }: { props: MetatagProps }) {
             <meta property="og:image" content={props.image} />
 
             <link rel="manifest" href="/manifest.json"/>
-            <link rel="apple-touch-icon" href="/icon.png"/>
+            <link rel="apple-touch-icon" href="/icon-large.png"/>
             <meta name="theme-color" content="#9A348E"/>
         </>
     );
