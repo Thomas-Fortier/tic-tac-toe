@@ -1,0 +1,29 @@
+.openSquare {
+    height: 180px;
+    width: 180px;
+    margin: 2px;
+    border: none;
+    background-color: #9a348e;
+    border-radius: 10px;
+    font-size: 80px;
+}
+
+.xSquare {
+    height: 180px;
+    width: 180px;
+    margin: 2px;
+    border: none;
+    background-color: #da627d;
+    border-radius: 10px;
+    font-size: 80px;
+}
+
+.oSquare {
+    height: 180px;
+    width: 180px;
+    margin: 2px;
+    border: none;
+    background-color: #fca17d;
+    border-radius: 10px;
+    font-size: 80px;
+}
