@@ -1,0 +1,16 @@
+{
+    "name": "Tic-Tac-Toe",
+    "short_name": "TTT",
+    "icons": [
+        {
+            "src": "./icon-large.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#9A348E",
+    "background_color": "#0D0628",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}
