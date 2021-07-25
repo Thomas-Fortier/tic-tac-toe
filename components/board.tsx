@@ -2,6 +2,7 @@ import Square from "./square";
 import SquareProps from "../lib/interfaces";
 import { useState } from "react";
 import styles from '../styles/Board.module.css';
+import toast from "react-hot-toast";
 
 export default function Board() {
     let [squares, setSquares] = useState(Array(9).fill(null));
@@ -10,14 +11,16 @@ export default function Board() {
     let status = getStatus(winner, xIsNext);
 
     const handleClick = (index: number) => {
-        if (squares[index] !== null)
+        if (squares[index] !== null || winner)
             return;
 
         let squaresClone = squares.slice();
         squaresClone[index] = xIsNext ? 'X' : 'O';
+        winner = calculateWinner(squaresClone);
 
         setSquares(squaresClone);
         setXIsNext(!xIsNext);
+        displayWinOrLoss(winner, squaresClone);
     }
 
     const renderSquare = (index: number) => {
@@ -29,11 +32,22 @@ export default function Board() {
         return <Square props={squareProps} />
     }
 
+    const resetGame = () => {
+        setSquares(Array(9).fill(null));
+        setXIsNext(true);
+        winner = null;
+    }
+
     // TODO: Cleanup
     return (
         <div>
             <h1 className={styles.title}>Tic-Tac-Toe</h1>
-            <p className={styles.status}>{status}</p>
+            <div className={styles.boardStatus}>
+                <p className={styles.status}>{status}</p>
+                <button className={`btn btn-primary ${styles.reset}`} onClick={resetGame}>
+                    New Game
+                </button>
+            </div>
             <div className={styles.board}>
                 <div className={styles.row}>
                     {renderSquare(0)}
@@ -84,4 +98,24 @@ function getStatus(winner: any, xIsNext: boolean) {
     return winner ?
         'Winner: ' + winner :
         'Next player: ' + (xIsNext ? 'X' : 'O');
+}
+
+function displayWinOrLoss(winner: any, squares: string[]) {
+    if (winner) {
+        toast.success(`Player ${winner} won!`);        
+        return;
+    }
+    
+    if (!containsEmptySquare(squares)) {
+        toast.error(`Nobody won :(`); 
+    }
+}
+
+function containsEmptySquare(squares: any[]) { 
+    for (let index = 0; index < squares.length; index++) {
+        if (squares[index] == null)
+            return true;
+    }
+
+    return false;
 }
