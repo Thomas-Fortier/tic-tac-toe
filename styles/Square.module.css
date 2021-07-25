@@ -1,29 +1,56 @@
-.openSquare {
+.square {
     height: 180px;
     width: 180px;
     margin: 2px;
     border: none;
-    background-color: #9a348e;
     border-radius: 10px;
     font-size: 80px;
+}
+
+.openSquare {
+    background-color: #9a348e;
 }
 
 .xSquare {
-    height: 180px;
-    width: 180px;
-    margin: 2px;
-    border: none;
     background-color: #da627d;
-    border-radius: 10px;
-    font-size: 80px;
 }
 
 .oSquare {
-    height: 180px;
-    width: 180px;
-    margin: 2px;
-    border: none;
     background-color: #fca17d;
-    border-radius: 10px;
-    font-size: 80px;
+}
+
+.textContainer {
+    height: 136px;
+}
+
+@media only screen and (max-width: 605px) {
+    .square {
+        height: 130px;
+        width: 130px;
+        margin: 2px;
+        font-size: 60px;
+    }
+
+    .square p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .square {
+        height: 100px;
+        width: 100px;
+        margin: 2px;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .square {
+        height: 80px;
+        width: 80px;
+        margin: 2px;
+        font-size: 40px;
+    }
 }

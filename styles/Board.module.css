@@ -1,0 +1,40 @@
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.board {
+    display: grid;
+}
+
+.status {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 425px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .status {
+        height: 80px;
+        width: 80px;
+        margin: 2px;
+        font-size: 15px;
+        width: 100px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 0;
+        height: 30px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+}

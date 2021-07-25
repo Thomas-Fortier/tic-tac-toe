@@ -5,8 +5,8 @@ export default function Square({ props: props }: { props: SquareProps }) {
     let styling = getStyling(props.value);
 
     return (
-        <button className={styling} onClick={ props.onClick }>
-            {props.value}
+        <button className={ `${styling} ${styles.square} ${'btn'}` } onClick={ props.onClick }>
+            <p>{props.value}</p>
         </button>
     );
 }
