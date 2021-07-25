@@ -1,5 +1,5 @@
 import Square from "./square";
-import SquareProps from "../lib/interfaces";
+import SquareProps from "../lib/squareProps.interface";
 import { useState } from "react";
 import styles from '../styles/Board.module.css';
 import toast from "react-hot-toast";

@@ -1,4 +1,4 @@
-import SquareProps from "../lib/interfaces";
+import SquareProps from "../lib/squareProps.interface";
 import styles from '../styles/Square.module.css'
 
 export default function Square({ props: props }: { props: SquareProps }) {
